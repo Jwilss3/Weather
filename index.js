@@ -23,7 +23,7 @@ app.set('view engine', '.hbs');
 app.get('/', async(req, res) => {
     let data = await getWeather("New York City", "US");
     let name = data.name;
-    let temp = data.main.temp;
+    let temp = data.temp;
     res.render('index', {name, temp});
 });
 
